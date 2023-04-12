@@ -18,34 +18,34 @@ response = requests.get(url="https://www.camara.gov.br/SitCamaraWS/Deputados.asm
 root = ET.fromstring(response.content)
 
 # Now we can play 8)
+dep_name = []
+dep_id = []
+dep_foto = []
+dep_uf = []
+dep_gender = []
 
-# Extract a list of names (remove the # from line 26 to run the function)
+# Extract a list of names (remove the # to run the function)
 for name in root.iter('nome'):
-    dep_name = []
     dep_name.append(name.text)
     #print(*dep_name)
     
-# Extract a list of ids (remove the # from line 32 to run the function)
+# Extract a list of ids (remove the # to run the function)
 for id in root.iter('ideCadastro'):
-    dep_id = []
     dep_id.append(id.text)
 #    print(*dep_id)
 
-# Extract a list of photo url (remove the # from line 38 to run the function)
+# Extract a list of photo url (remove the # to run the function)
 for urlFoto in root.iter('urlFoto'):
-    dep_foto = []
     dep_foto.append(urlFoto.text)
 #    print(*dep_foto)
 
-# Extract a list UF (remove the # from line 44 to run the function)
+# Extract a list UF (remove the # to run the function)
 for uf in root.iter('uf'):
-    dep_uf = []
     dep_uf.append(uf.text)
 #    print(*dep_uf)
 
-# Extract a list gender (remove the # from line 50 to run the function)
+# Extract a list gender (remove the # to run the function)
 for sexo in root.iter('sexo'):
-    dep_gender = []
     dep_gender.append(sexo.text)
 #    print(*dep_gender)
 
