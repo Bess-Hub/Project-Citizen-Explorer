@@ -10,6 +10,7 @@
 
 In this exercise we will build a data visualisation model that allows us to consult a congressperson member of Brazilian Lower House.
 <br>
+
 The information that you can expect to visualize in the 1.1 version are: congressperson name, political party, the state that the congressperson represents and gender. The data is obtained through the Brazilian Lower House website throught their "Open Data" resource available at: https://dadosabertos.camara.leg.br/swagger/api.html
 <br>
 The idea is to build other versions with more functions and data.
